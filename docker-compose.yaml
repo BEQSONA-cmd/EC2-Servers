@@ -1,0 +1,18 @@
+services:
+
+  ec2-1:
+    build: .
+    container_name: ec2-1
+    hostname: ec2-1
+
+    restart: unless-stopped
+
+    cpus: 1
+    mem_limit: 2g
+
+    volumes:
+      - ./data/ec2-1:/home/ubuntu
+      - ./ssh/ec2-1:/ssh:ro
+
+    ports:
+      - "2201:22"
