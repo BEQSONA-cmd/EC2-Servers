@@ -1,1 +1,0 @@
-docker inspect ec2-1 | grep IPAddress

@@ -16,3 +16,20 @@ services:
 
     ports:
       - "2201:22"
+
+  ec2-2:
+    build: .
+    container_name: ec2-2
+    hostname: ec2-2
+
+    restart: unless-stopped
+
+    cpus: 1
+    mem_limit: 2g
+
+    volumes:
+      - ./data/ec2-2:/home/ubuntu
+      - ./ssh/ec2-2:/ssh:ro
+
+    ports:
+      - "2202:22"
