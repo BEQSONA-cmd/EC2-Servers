@@ -1,5 +1,5 @@
 
-### ssh for server
+### ssh keys for server
 
 ```bash
 ./generate-keys.sh ec2-1
@@ -58,16 +58,16 @@ cloudflared tunnel login
 cloudflared tunnel create ec2-servers
 ```
 
+### you can find tunnel id with
+
+```Bash
+cloudflared tunnel list
+```
+
 ### create config file 
 
 ```Bash
 vim ~/.cloudflared/config.yml
-```
-
-### to get tunnel id
-
-```Bash
-cloudflared tunnel list
 ```
 
 ### with this configurations
@@ -86,12 +86,16 @@ ingress:
   - service: http_status:404
 ```
 
-### before running the tunnel you need to add new dns records
-### type will be CNAME name for example ec2-1
-### target should be <tunnel id>.cfargotunnel.com
-### add as many as amount of containers
 
-### when the containers are working run the runnel with 
+
+### before running the tunnel you need to add new dns records
+ **type** will be **CNAME** and **name** for example **ec2-1** 
+ 
+ **target** should be **(tunnel_id).cfargotunnel.com**
+ 
+
+
+### when the containers are working run the tunnel with 
 
 ```Bash
 cloudflared tunnel run ec2-servers
