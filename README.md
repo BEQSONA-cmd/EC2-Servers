@@ -89,6 +89,7 @@ ingress:
 ### before running the tunnel you need to add new dns records
 ### type will be CNAME name for example ec2-1
 ### target should be <tunnel id>.cfargotunnel.com
+### add as many as amount of containers
 
 ### when the containers are working run the runnel with 
 
