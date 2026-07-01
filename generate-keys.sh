@@ -9,4 +9,3 @@ ssh-keygen \
     -b 4096 \
     -N "" \
     -f ssh/$SERVER/id_rsa
-    

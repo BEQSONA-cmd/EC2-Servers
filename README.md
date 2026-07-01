@@ -89,7 +89,7 @@ ingress:
 
 
 ### before running the tunnel you need to add new dns records
- **type** will be **CNAME** and **name** for example **ec2-1** 
+ **type** will be **CNAME** and **name** will be **"*"** 
  
  **target** should be **(tunnel_id).cfargotunnel.com**
  
